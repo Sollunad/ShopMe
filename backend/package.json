@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "form-data": "^2.5.0",
+    "fs": "0.0.1-security",
+    "glob": "^7.1.4",
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}
