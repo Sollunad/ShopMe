@@ -54,6 +54,10 @@
 
                 } else {
                     this.deleting = true;
+                    const that = this;
+                    const timer = window.setTimeout(function() {
+                        that.deleting = false;
+                    }, 3000);
                 }
             }
         }

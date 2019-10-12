@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" afterDir="false" />
     </list>
     <list id="1587ab50-fa1a-444f-9b5d-ddf7f0288e19" name="DNC" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570871948151</updated>
       <workItem from="1570871952229" duration="617000" />
-      <workItem from="1570872586049" duration="11243000" />
+      <workItem from="1570872586049" duration="11449000" />
     </task>
     <task id="LOCAL-00001" summary="backend work and frontend hello world">
       <created>1570876240747</created>
@@ -127,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570884284851</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="renaming">
+      <created>1570884823667</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570884823667</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +159,7 @@
     <MESSAGE value="clear stuff and change ports" />
     <MESSAGE value="refresh" />
     <MESSAGE value="change public path and ignore items.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="change public path and ignore items.json" />
+    <MESSAGE value="renaming" />
+    <option name="LAST_COMMIT_MESSAGE" value="renaming" />
   </component>
 </project>
