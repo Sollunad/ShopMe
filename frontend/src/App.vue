@@ -1,7 +1,7 @@
 <template>
   <v-app class="app">
     <v-content>
-      <Toolbar class="toolbar" @setItems="setItems"></Toolbar>
+      <Toolbar class="toolbar" @setItems="setItems" @refresh="loadItems"></Toolbar>
       <ListOverview :items="items" @setItems="setItems"></ListOverview>
     </v-content>
   </v-app>

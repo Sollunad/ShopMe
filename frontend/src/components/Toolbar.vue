@@ -9,6 +9,7 @@
                 v-model="listName"
         ></v-text-field>
         <v-btn v-if="creating" @click="createList">{{buttonText}}</v-btn>
+        <v-btn text icon><v-icon @click="refresh">mdi-refresh</v-icon></v-btn>
     </div>
 </template>
 
@@ -37,6 +38,9 @@
                     this.$emit('setItems', items);
                     this.listName = '';
                 }
+            },
+            refresh: function() {
+                this.$emit('refresh');
             }
         }
     }

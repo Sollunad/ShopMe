@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/store/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/store/items.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Toolbar.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570871948151</updated>
       <workItem from="1570871952229" duration="617000" />
-      <workItem from="1570872586049" duration="9746000" />
+      <workItem from="1570872586049" duration="10142000" />
     </task>
     <task id="LOCAL-00001" summary="backend work and frontend hello world">
       <created>1570876240747</created>
@@ -105,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570882936939</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="clear stuff and change ports">
+      <created>1570883332756</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570883332756</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +134,7 @@
     <MESSAGE value="backend work and frontend hello world" />
     <MESSAGE value="add frontend service" />
     <MESSAGE value="stuff stuff stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="stuff stuff stuff" />
+    <MESSAGE value="clear stuff and change ports" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear stuff and change ports" />
   </component>
 </project>
