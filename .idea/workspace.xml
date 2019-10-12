@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/store/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Item.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ListOverview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ShoppingList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Toolbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/plugins/vuetify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/store/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/store/items.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -80,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570871948151</updated>
       <workItem from="1570871952229" duration="617000" />
-      <workItem from="1570872586049" duration="4966000" />
+      <workItem from="1570872586049" duration="9311000" />
     </task>
     <task id="LOCAL-00001" summary="backend work and frontend hello world">
       <created>1570876240747</created>
@@ -89,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570876240747</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add frontend service">
+      <created>1570877869914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570877869914</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="backend work and frontend hello world" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend work and frontend hello world" />
+    <MESSAGE value="add frontend service" />
+    <option name="LAST_COMMIT_MESSAGE" value="add frontend service" />
   </component>
 </project>
