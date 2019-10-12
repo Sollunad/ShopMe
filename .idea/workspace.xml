@@ -1,50 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="backend work and frontend hello world">
-      <change afterPath="$PROJECT_DIR$/.idea/ShopMe.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/endpoints/items/controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/endpoints/items/items.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/itemBuilder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/listBuilder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/store/items.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/store/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/android-chrome-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/apple-touch-icon-120x120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/apple-touch-icon-152x152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/apple-touch-icon-180x180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/apple-touch-icon-60x60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/apple-touch-icon-76x76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/msapplication-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/img/icons/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/registerServiceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/logo.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,8 +80,16 @@
       <option name="presentableId" value="Default" />
       <updated>1570871948151</updated>
       <workItem from="1570871952229" duration="617000" />
-      <workItem from="1570872586049" duration="3644000" />
+      <workItem from="1570872586049" duration="4966000" />
     </task>
+    <task id="LOCAL-00001" summary="backend work and frontend hello world">
+      <created>1570876240747</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570876240747</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
