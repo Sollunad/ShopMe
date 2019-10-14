@@ -46,6 +46,10 @@ function deleteList(id) {
 
 function deleteItem(id) {
     let lists = store.get(store.types.items);
-    lists = lists.map(l => l.filter(i => i.id !== id));
+    lists = lists.map(l => {
+        const list = l;
+        list.items = list.items.filter(i => i.id !== id);
+        return list;
+    });
     store.set(store.types.items, lists);
 }

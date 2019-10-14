@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ListOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ListOverview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ShoppingList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ShoppingList.vue" afterDir="false" />
     </list>
     <list id="1587ab50-fa1a-444f-9b5d-ddf7f0288e19" name="DNC" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +86,8 @@
       <option name="presentableId" value="Default" />
       <updated>1570871948151</updated>
       <workItem from="1570871952229" duration="617000" />
-      <workItem from="1570872586049" duration="11449000" />
+      <workItem from="1570872586049" duration="12122000" />
+      <workItem from="1571071564369" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="backend work and frontend hello world">
       <created>1570876240747</created>
@@ -133,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570884823667</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="delete timeout">
+      <created>1570885039507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1570885039507</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +172,7 @@
     <MESSAGE value="refresh" />
     <MESSAGE value="change public path and ignore items.json" />
     <MESSAGE value="renaming" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming" />
+    <MESSAGE value="delete timeout" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete timeout" />
   </component>
 </project>
