@@ -30,9 +30,9 @@
             changeChecked: function() {
                 _items.setChecked(this.item.id, this.checked);
             },
-            deleteItem: function() {
-                _items.deleteItem(this.item.id);
-                this.$emit('refresh');
+            deleteItem: async function() {
+                const items = await _items.deleteItem(this.item.id);
+                this.$emit('setItems', items);
             }
         },
         mounted: function() {

@@ -1,7 +1,7 @@
 <template>
     <div class="shoppingList">
         <ListToolbar :list="list" @setItems="setItems"></ListToolbar>
-        <Item v-for="item in list.items" :key="item.id" :item="item" class="item" @refresh="refresh"></Item>
+        <Item v-for="item in list.items" :key="item.id" :item="item" class="item" @setItems="setItems"></Item>
     </div>
 </template>
 
@@ -15,9 +15,6 @@
         methods: {
             setItems: function(items) {
                 this.$emit('setItems', items);
-            },
-            refresh: function() {
-                this.$emit('refresh');
             }
         }
     }

@@ -5,7 +5,7 @@
         </v-tab>
 
         <v-tab-item v-for="list in items" :key="list.id">
-            <ShoppingList :list="list" @setItems="setItems" @refresh="refresh"></ShoppingList>
+            <ShoppingList :list="list" @setItems="setItems"></ShoppingList>
         </v-tab-item>
     </v-tabs>
 </template>
@@ -19,9 +19,6 @@
         methods: {
             setItems: function(items) {
                 this.$emit('setItems', items);
-            },
-            refresh: function() {
-                this.$emit('refresh');
             }
         }
     }
