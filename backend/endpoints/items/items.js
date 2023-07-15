@@ -5,6 +5,7 @@ const listBuilder = require('../../services/listBuilder');
 exports.getItems = getItems;
 exports.addList = addList;
 exports.addItem = addItem;
+exports.addItems = addItems;
 exports.setChecked = setChecked;
 exports.deleteList = deleteList;
 exports.deleteItem = deleteItem;
@@ -15,7 +16,7 @@ function getItems() {
 
 function addList(name) {
     const lists = store.get(store.types.items);
-    const list = listBuilder.new(name);
+    const list = listBuilder.newList(name);
     lists.push(list);
     store.set(store.types.items, lists);
 }
@@ -26,6 +27,18 @@ function addItem(listId, name) {
     console.log(list);
     const item = itemBuilder.new(name);
     list.items.push(item);
+    store.set(store.types.items, lists);
+}
+
+function addItems(listId, names) {
+    const lists = store.get(store.types.items);
+    const list = lists.find(l => l.id === listId);
+    console.log(list);
+
+    for (const name of names) {
+        const item = itemBuilder.new(name);
+        list.items.push(item);
+    }
     store.set(store.types.items, lists);
 }
 

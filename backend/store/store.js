@@ -1,7 +1,8 @@
 const fs = require('fs');
 
 const storeTypes = {
-    "items": "items"
+    "items": "items",
+    "recipes": "recipes"
 };
 
 exports.get = readJSON;

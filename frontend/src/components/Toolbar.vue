@@ -1,5 +1,6 @@
 <template>
     <div>
+        <v-btn @click="openRecipes">Rezepte</v-btn>
         <v-btn v-if="!creating" @click="startCreating">Neue Einkaufsliste</v-btn>
         <v-text-field
                 v-if="creating"
@@ -38,6 +39,9 @@
                     this.$emit('setItems', items);
                     this.listName = '';
                 }
+            },
+            openRecipes: async function() {
+                await this.$router.push({path: 'recipes'});
             },
             refresh: function() {
                 this.$emit('refresh');

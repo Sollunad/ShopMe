@@ -3,6 +3,7 @@ const _items = require('./items');
 module.exports = [
     {function: getItems, path: '', method: 'get'},
     {function: addItem, path: '', method: 'post'},
+    {function: addItems, path: '', method: 'post'},
     {function: deleteItem, path: '', method: 'delete'},
     {function: setChecked, path: '/checked', method: 'put'},
     {function: addList, path: '/lists', method: 'post'},
@@ -18,6 +19,15 @@ function addItem(req) {
     const name = req.body.name;
     if (list && name) {
         _items.addItem(list, name);
+    }
+    return _items.getItems();
+}
+
+function addItems(req) {
+    const list = req.body.list;
+    const name = req.body.name;
+    if (list && name) {
+        _items.addItems(list, name);
     }
     return _items.getItems();
 }
