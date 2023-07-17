@@ -3,7 +3,7 @@ const _items = require('./items');
 module.exports = [
     {function: getItems, path: '', method: 'get'},
     {function: addItem, path: '', method: 'post'},
-    {function: addItems, path: '', method: 'post'},
+    {function: addItems, path: '/bulk', method: 'post'},
     {function: deleteItem, path: '', method: 'delete'},
     {function: setChecked, path: '/checked', method: 'put'},
     {function: addList, path: '/lists', method: 'post'},

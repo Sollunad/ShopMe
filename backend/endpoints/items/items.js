@@ -25,7 +25,7 @@ function addItem(listId, name) {
     const lists = store.get(store.types.items);
     const list = lists.find(l => l.id === listId);
     console.log(list);
-    const item = itemBuilder.new(name);
+    const item = itemBuilder.newItem(name);
     list.items.push(item);
     store.set(store.types.items, lists);
 }
@@ -36,7 +36,7 @@ function addItems(listId, names) {
     console.log(list);
 
     for (const name of names) {
-        const item = itemBuilder.new(name);
+        const item = itemBuilder.newItem(name);
         list.items.push(item);
     }
     store.set(store.types.items, lists);

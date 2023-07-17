@@ -10,6 +10,8 @@ async function addItem(list, name) {
     return await con('items', 'post', {list, name});
 }
 
+// TODO: Add multiple items
+
 async function deleteItem(id) {
     return await con('items', 'delete', {id});
 }

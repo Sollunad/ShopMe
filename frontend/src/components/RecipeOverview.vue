@@ -1,60 +1,34 @@
 <template>
     <div>
-        <v-btn v-if="!creating" @click="startCreating">Neues Rezept</v-btn>
-        <v-btn @click="openLists">Zurück zu Listen</v-btn>
         <v-tabs>
-            <v-tab v-for="list in recipes" :key="list.id">
-                {{list.name}}
+            <v-tab v-for="recipe in recipes" :key="recipe.id">
+                {{recipe.name}}
             </v-tab>
 
-            <v-tab-item v-for="list in recipes" :key="list.id">
-                <ShoppingList :list="list" @setRecipes="setRecipes"></ShoppingList>
+            <v-tab-item v-for="recipe in recipes" :key="recipe.id">
+                <IngredientList :recipe="recipe" @setRecipes="setRecipes"></IngredientList>
+                <v-textarea
+                    background-color="grey darken-3"
+                    solo
+                    name="input-7-4"
+                    :value="instructionsText"
+                ></v-textarea>
             </v-tab-item>
-
-            <v-text-field
-                v-if="creating"
-                label="Solo"
-                placeholder="Name des Rezepts"
-                solo
-                v-model="recipeName"
-            ></v-text-field>
-            <v-btn v-if="creating" @click="createRecipe">{{buttonText}}</v-btn>
         </v-tabs>
     </div>
 </template>
 
 <script>
-    import ShoppingList from "./ShoppingList";
+    import IngredientList from "./IngredientList";
     import _recipes from "../services/endpoints/recipes";
     export default {
         name: "RecipeOverview",
-        data: () => ({
-            creating: false,
-            recipeName: ''
-        }),
-        computed: {
-            buttonText: function() {
-                return this.recipeName? 'Speichern' : 'Abbrechen';
-            }
-        },
-        components: {ShoppingList},
+        components: {IngredientList},
         props: ['recipes'],
+        data: () => ({
+            instructionsText: 'Hier steht der Beispieltext',
+        }),
         methods: {
-            startCreating: function() {
-                this.creating = true;
-            },
-            createRecipe: async function() {
-                this.creating = false;
-                if (this.recipeName) {
-                    const recipe = await _recipes.addRecipe('test', this.recipeName, 'instructions');
-                    this.$emit('setRecipes', recipe);
-                    this.recipeName = '';
-                }
-            },
-            openLists: async function() {
-                // TODO fix
-                await this.$router.push({path: '/'});
-            },
             setRecipes: function(recipes) {
                 this.$emit('setRecipes', recipes);
             }

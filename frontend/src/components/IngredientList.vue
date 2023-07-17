@@ -1,0 +1,31 @@
+<template>
+    <div class="ingredientList">
+        <RecipeToolbar :recipe="recipe" @setRecipes="setRecipes"></RecipeToolbar>
+        <Ingredient v-for="ingredient in recipe.ingredients" :key="ingredient.id" :ingredient="ingredient" class="ingredient" @setRecipes="setRecipes"></Ingredient>
+    </div>
+</template>
+
+<script>
+import Ingredient from "./Ingredient";
+import RecipeToolbar from "./RecipeToolbar";
+export default {
+    name: "IngredientList",
+    components: {RecipeToolbar, Ingredient},
+    props: ['recipe'],
+    methods: {
+        setRecipes: function(recipes) {
+            this.$emit('setRecipes', recipes);
+        }
+    }
+}
+</script>
+
+<style scoped>
+    .ingredientList {
+        padding: 10px;
+    }
+
+    .ingredient {
+        margin-bottom: -15px;
+    }
+</style>

@@ -1,8 +1,16 @@
 const uuid = require('uuid/v4');
 
-exports.new = newItem;
+exports.newItem = newItem;
+exports.newIngredient = newIngredient;
 
 function newItem(name) {
+    const id = uuid();
+    return {
+        id, name, checked: false
+    }
+}
+
+function newIngredient(name) {
     const id = uuid();
     return {
         id, name, checked: false
