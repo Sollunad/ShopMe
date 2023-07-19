@@ -25,9 +25,9 @@ function addItem(req) {
 
 function addItems(req) {
     const list = req.body.list;
-    const name = req.body.name;
-    if (list && name) {
-        _items.addItems(list, name);
+    const names = req.body.names;
+    if (list && names) {
+        _items.addItems(list, names);
     }
     return _items.getItems();
 }

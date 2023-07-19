@@ -1,6 +1,6 @@
 import con from '../connector';
 
-export default { getItems, addItem, deleteItem, setChecked, addList, deleteList };
+export default { getItems, addItem, addItems, deleteItem, setChecked, addList, deleteList };
 
 async function getItems() {
     return await con('items', 'get', {});
@@ -10,7 +10,9 @@ async function addItem(list, name) {
     return await con('items', 'post', {list, name});
 }
 
-// TODO: Add multiple items
+async function addItems(list, names) {
+    return await con('items/bulk', 'post', {list, names})
+}
 
 async function deleteItem(id) {
     return await con('items', 'delete', {id});

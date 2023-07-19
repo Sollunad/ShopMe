@@ -37,13 +37,13 @@ function addIngredient(recipeId, name) {
 }
 
 function deleteIngredient(id) {
-    let lists = store.get(store.types.recipes);
-    lists = lists.map(l => {
-        const list = l;
-        list.ingredients = list.ingredients.filter(i => i.id !== id);
-        return list;
+    let recipes = store.get(store.types.recipes);
+    recipes = recipes.map(l => {
+        const recipe = l;
+        recipe.ingredients = recipe.ingredients.filter(i => i.id !== id);
+        return recipe;
     });
-    store.set(store.types.recipes, lists);
+    store.set(store.types.recipes, recipes);
 }
 
 function changeInstructions(recipeId, instructions) {
@@ -55,10 +55,10 @@ function changeInstructions(recipeId, instructions) {
 }
 
 function setChecked(id, checked) {
-    const lists = store.get(store.types.recipes);
-    for (const list of lists) {
-        const ingredient = list.ingredients.find(i => i.id === id);
+    const recipes = store.get(store.types.recipes);
+    for (const recipe of recipes) {
+        const ingredient = recipe.ingredients.find(i => i.id === id);
         if (ingredient) ingredient.checked = checked;
     }
-    store.set(store.types.items, lists);
+    store.set(store.types.recipes, recipes);
 }

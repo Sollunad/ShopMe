@@ -1,7 +1,7 @@
 <template>
     <div class="ingredientList">
-        <RecipeToolbar :recipe="recipe" @setRecipes="setRecipes"></RecipeToolbar>
-        <Ingredient v-for="ingredient in recipe.ingredients" :key="ingredient.id" :ingredient="ingredient" class="ingredient" @setRecipes="setRecipes"></Ingredient>
+        <RecipeToolbar :recipe="recipe" :lists="lists" @setRecipes="setRecipes" @setItems="setItems"></RecipeToolbar>
+        <Ingredient v-for="ingredient in recipe.ingredients" :key="ingredient.id" :ingredient="ingredient" class="ingredient" @setRecipes="setRecipes" ></Ingredient>
     </div>
 </template>
 
@@ -11,10 +11,13 @@ import RecipeToolbar from "./RecipeToolbar";
 export default {
     name: "IngredientList",
     components: {RecipeToolbar, Ingredient},
-    props: ['recipe'],
+    props: ['recipe', 'lists'],
     methods: {
         setRecipes: function(recipes) {
             this.$emit('setRecipes', recipes);
+        },
+        setItems: function(items) {
+            this.$emit('setItems', items);
         }
     }
 }

@@ -5,8 +5,7 @@
             @change="changeChecked"
         >
             <template v-slot:label>
-                <span
-                    v-bind:class="{checked}">
+                <span>
                     {{ingredient.name}}
                 </span>
                 <v-btn text icon @click.stop="deleteIngredient">
@@ -40,9 +39,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.checked {
-    text-decoration: line-through;
-}
-</style>

@@ -27,5 +27,5 @@ async function changeInstruction(recipe, instructions) {
 }
 
 async function setChecked(id, checked) {
-    return await con('recipes', 'put', {id, checked});
+    return await con('recipes/checked', 'put', {id, checked});
 }
