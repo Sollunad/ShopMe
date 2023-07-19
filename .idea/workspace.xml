@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="start recipes">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Ingredient.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/IngredientList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Toolbar2.vue" afterDir="false" />
+    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="ingredients for recipes">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Instruction.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/items.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/endpoints/recipes/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/recipes/controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/endpoints/recipes/recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/recipes/recipes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/itemBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/itemBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/endpoints/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/endpoints/items.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/services/endpoints/recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/endpoints/recipes.js" afterDir="false" />
     </list>
     <list id="1587ab50-fa1a-444f-9b5d-ddf7f0288e19" name="DNC" comment="" />
@@ -118,7 +110,9 @@
       <workItem from="1571071564369" duration="2472000" />
       <workItem from="1689425011425" duration="7794000" />
       <workItem from="1689440120639" duration="3699000" />
-      <workItem from="1689616231967" duration="8373000" />
+      <workItem from="1689616231967" duration="8627000" />
+      <workItem from="1689759834477" duration="3045000" />
+      <workItem from="1689773767867" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="backend work and frontend hello world">
       <created>1570876240747</created>
@@ -191,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689443271943</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ingredients for recipes">
+      <option name="closed" value="true" />
+      <created>1689624813554</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689624813555</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +221,7 @@
     <MESSAGE value="delete timeout" />
     <MESSAGE value="delete items" />
     <MESSAGE value="start recipes" />
-    <option name="LAST_COMMIT_MESSAGE" value="start recipes" />
+    <MESSAGE value="ingredients for recipes" />
+    <option name="LAST_COMMIT_MESSAGE" value="ingredients for recipes" />
   </component>
 </project>

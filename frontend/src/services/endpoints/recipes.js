@@ -1,6 +1,6 @@
 import con from '../connector';
 
-export default { getRecipes, addRecipe, deleteRecipe, addIngredient, deleteIngredient, setChecked };
+export default { getRecipes, addRecipe, deleteRecipe, addIngredient, deleteIngredient, changeInstruction , setChecked };
 
 async function getRecipes() {
     return await con('recipes', 'get', {});
@@ -20,6 +20,10 @@ async function addIngredient(recipe, name) {
 
 async function deleteIngredient(id) {
     return await con('recipes/ingredients', 'delete', {id});
+}
+
+async function changeInstruction(recipe, instructions) {
+    return await con('recipes/instructions', 'post', {recipe, instructions})
 }
 
 async function setChecked(id, checked) {

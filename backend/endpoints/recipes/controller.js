@@ -7,6 +7,7 @@ module.exports = [
     {function: deleteRecipe, path: '', method: 'delete'},
     {function: addIngredient, path: '/ingredients', method: 'post'},
     {function: deleteIngredient, path: '/ingredients', method: 'delete'},
+    {function: changeInstruction, path: '/instructions', method: 'post'},
     {function: setChecked, path: '/checked', method: 'put'}
 ];
 
@@ -38,7 +39,7 @@ function addIngredient(req) {
     if (recipe && name) {
         _recipes.addIngredient(recipe, name);
     }
-    return _recipes.getIngredients();
+    return _recipes.getRecipes();
 }
 
 function deleteIngredient(req) {
@@ -46,7 +47,16 @@ function deleteIngredient(req) {
     if (id) {
         _recipes.deleteIngredient(id);
     }
-    return _recipes.getIngredients();
+    return _recipes.getRecipes();
+}
+
+function changeInstruction(req) {
+    const recipe = req.body.recipe;
+    const instructions = req.body.instructions;
+    if (recipe && instructions) {
+        _recipes.changeInstruction(recipe, instructions);
+    }
+    return _recipes.getRecipes()
 }
 
 function setChecked(req) {
@@ -55,5 +65,5 @@ function setChecked(req) {
     if (id && (checked === true || checked === false)) {
         _recipes.setChecked(id, checked);
     }
-    return _recipes.getIngredients();
+    return _recipes.getRecipes();
 }
