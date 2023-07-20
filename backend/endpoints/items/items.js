@@ -28,7 +28,7 @@ function addItem(listId, item) {
     const existingItem = list.items.find(i => i.unit === item.unit && i.name === item.name);
     if (existingItem) {
         if (existingItem.amount || item.amount) {
-            existingItem.amount = (existingItem.amount ?? 0) + (parseInt(item.amount ?? 0))
+            existingItem.amount = (existingItem.amount || 0) + (parseInt(item.amount || 0))
         }
     } else {
         const builtItem = itemBuilder.newItem(item);

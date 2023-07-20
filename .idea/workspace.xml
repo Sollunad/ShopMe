@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="recipes final.final">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/IngredientList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/IngredientList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" afterDir="false" />
+    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="Fix recipe export">
+      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/items.js" afterDir="false" />
     </list>
     <list id="1587ab50-fa1a-444f-9b5d-ddf7f0288e19" name="DNC" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689856682548</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fix recipe export">
+      <option name="closed" value="true" />
+      <created>1689869264794</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689869264794</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +262,7 @@
     <MESSAGE value="delete all items button" />
     <MESSAGE value="recipes final" />
     <MESSAGE value="recipes final.final" />
-    <option name="LAST_COMMIT_MESSAGE" value="recipes final.final" />
+    <MESSAGE value="Fix recipe export" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix recipe export" />
   </component>
 </project>
