@@ -3,6 +3,7 @@
         <v-textarea
             background-color="grey darken-3"
             outlined
+            auto-grow
             name="input-7-4"
             label="Anleitung"
             v-model="localInstructions"
@@ -32,6 +33,13 @@ export default {
     },
     mounted: function() {
         this.localInstructions = this.recipe.instructions;
+    },
+    watch: {
+        recipe: function(val, oldVal) {
+            if (val.id !== oldVal.id) {
+                this.localInstructions = this.recipe.instructions;
+            }
+        }
     }
 
 }
