@@ -110,8 +110,7 @@ export default {
             const unchecked = this.recipe.ingredients.filter(item => !item.checked);
             const selectedListId = this.radioGroup;
             if (unchecked && selectedListId) {
-                const lists = await _items.addItems(selectedListId, unchecked);
-                this.$emit('setItems', lists)
+                await _items.addItems(selectedListId, unchecked);
             }
             this.showPopup = false;
         },

@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="recipes final.final">
-      <change afterPath="$PROJECT_DIR$/frontend/src/util/parseItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/items.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/endpoints/recipes/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/recipes/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/endpoints/recipes/recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/recipes/recipes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/itemBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/itemBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/listBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/listBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Ingredient.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Ingredient.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Instruction.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Instruction.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/IngredientList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/IngredientList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Toolbar2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Toolbar2.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/endpoints/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/endpoints/items.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/endpoints/recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/endpoints/recipes.js" afterDir="false" />
     </list>
     <list id="1587ab50-fa1a-444f-9b5d-ddf7f0288e19" name="DNC" comment="" />
     <option name="SHOW_DIALOG" value="false" />

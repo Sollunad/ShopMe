@@ -1,7 +1,7 @@
 <template>
     <div>
         <Toolbar2 class="toolbar" @setRecipes="setRecipes" @refresh="loadRecipes"></Toolbar2>
-        <RecipeOverview :recipes="recipes" :lists="lists" @setRecipes="setRecipes" @setItems="setItems" @refresh="loadRecipes"></RecipeOverview>
+        <RecipeOverview :recipes="recipes" :lists="lists" @setRecipes="setRecipes" @refresh="loadRecipes"></RecipeOverview>
 
     </div>
 </template>
@@ -25,7 +25,7 @@ export default {
             this.setRecipes(await _recipes.getRecipes());
         },
         loadLists: async function() {
-            this.setItems(await _items.getItems());
+            this.lists = await _items.getItems();
         },
         setRecipes: function(recipes) {
             this.recipes = recipes;
@@ -42,9 +42,6 @@ export default {
                 return 0;
             });
         },
-        setItems: function(items) {
-            this.items = items;
-        }
     },
     mounted: async function() {
         await this.loadRecipes();

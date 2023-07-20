@@ -1,6 +1,6 @@
 <template>
     <div class="ingredientList">
-        <RecipeToolbar :recipe="recipe" :lists="lists" @setRecipes="setRecipes" @setItems="setItems"></RecipeToolbar>
+        <RecipeToolbar :recipe="recipe" :lists="lists" @setRecipes="setRecipes"></RecipeToolbar>
         <Ingredient v-for="ingredient in recipe.ingredients" :key="ingredient.id" :ingredient="ingredient" class="ingredient" @setRecipes="setRecipes" ></Ingredient>
     </div>
 </template>
@@ -16,9 +16,6 @@ export default {
         setRecipes: function(recipes) {
             this.$emit('setRecipes', recipes);
         },
-        setItems: function(items) {
-            this.$emit('setItems', items);
-        }
     }
 }
 </script>

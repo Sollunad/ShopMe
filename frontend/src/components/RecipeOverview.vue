@@ -6,7 +6,7 @@
             v-model="currentRecipeName"
         ></v-autocomplete>
         <div v-if="currentRecipe">
-            <IngredientList :recipe="currentRecipe" :lists="lists" @setRecipes="setRecipes" @setItems="setItems" ></IngredientList>
+            <IngredientList :recipe="currentRecipe" :lists="lists" @setRecipes="setRecipes"></IngredientList>
             <Instruction :recipe="currentRecipe" @setRecipes="setRecipes" ></Instruction>
         </div>
     </div>
@@ -26,9 +26,6 @@
             setRecipes: function(recipes) {
                 this.$emit('setRecipes', recipes);
             },
-            setItems: function(items) {
-                this.$emit('setItems', items);
-            }
         },
         computed: {
             recipeNames: function() {
