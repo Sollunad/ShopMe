@@ -2,7 +2,7 @@
     <div>
         <v-textarea
             background-color="grey darken-3"
-            counter
+            outlined
             name="input-7-4"
             label="Anleitung"
             v-model="localInstructions"

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <v-btn @click="openLists">Zurück zu Listen</v-btn>
-        <v-btn v-if="!creating" @click="startCreating">Neues Rezept</v-btn>
+        <v-btn @click="openLists" class="mr-3 mb-3">Zurück zu Listen</v-btn>
+        <v-btn v-if="!creating" @click="startCreating" class="mr-3 mb-3">Neues Rezept</v-btn>
         <v-text-field
             v-if="creating"
             label="Solo"
@@ -9,8 +9,8 @@
             solo
             v-model="recipeName"
         ></v-text-field>
-        <v-btn v-if="creating" @click="createRecipe">{{buttonText}}</v-btn>
-        <v-btn text icon><v-icon @click="refresh">mdi-refresh</v-icon></v-btn>
+        <v-btn v-if="creating" @click="createRecipe" class="mr-3 mb-3">{{buttonText}}</v-btn>
+        <v-btn text icon><v-icon @click="refresh" class="mr-3 mb-3">mdi-refresh</v-icon></v-btn>
     </div>
 </template>
 
