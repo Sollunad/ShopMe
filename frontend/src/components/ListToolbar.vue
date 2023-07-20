@@ -16,6 +16,7 @@
 
 <script>
     import _items from '../services/endpoints/items';
+    import {parseItem} from "@/util/parseItem";
 
     export default {
         name: "ItemCreator",
@@ -50,7 +51,8 @@
             addItem: async function() {
                 this.creating = false;
                 if (this.itemName) {
-                    const items = await _items.addItem(this.list.id, this.itemName);
+                    const parsedItem = parseItem(this.itemName);
+                    const items = await _items.addItem(this.list.id, parsedItem);
                     this.$emit('setItems', items);
                     this.itemName = '';
                 }
@@ -63,25 +65,20 @@
                 } else {
                     this.deleting = true;
                     const that = this;
-                    const timer = window.setTimeout(function() {
+                    window.setTimeout(function() {
                         that.deleting = false;
                     }, 3000);
                 }
             },
             deleteAllItems: async function() {
                 if (this.emptying) {
-                    let items = this.list.items;
-                    console.log(items)
-                    for (const item of items) {
-                        items = await _items.deleteItem(item.id);
-                        console.log(items)
-                    }
+                    const items = await _items.emptyList(this.list.id);
                     this.$emit('setItems', items);
                     this.emptying = false;
                 } else {
                     this.emptying = true;
                     const that = this;
-                    const timer = window.setTimeout(function() {
+                    window.setTimeout(function() {
                         that.emptying = false;
                     }, 3000);
                 }

@@ -37,7 +37,7 @@ export default {
         createRecipe: async function() {
             this.creating = false;
             if (this.recipeName) {
-                const recipe = await _recipes.addRecipe('test', this.recipeName, 'instructions');
+                const recipe = await _recipes.addRecipe(this.recipeName);
                 this.$emit('setRecipes', recipe);
                 this.recipeName = '';
             }

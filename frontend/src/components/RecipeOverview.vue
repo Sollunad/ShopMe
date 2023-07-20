@@ -1,15 +1,14 @@
 <template>
-    <div>
-        <v-tabs>
-            <v-tab v-for="recipe in recipes" :key="recipe.id">
-                {{recipe.name}}
-            </v-tab>
-
-            <v-tab-item v-for="recipe in recipes" :key="recipe.id">
-                <IngredientList :recipe="recipe" :lists="lists" @setRecipes="setRecipes" @setItems="setItems" ></IngredientList>
-                <Instruction :recipe="recipe" @setRecipes="setRecipes" ></Instruction>
-            </v-tab-item>
-        </v-tabs>
+    <div class="grey darken-4">
+        <v-autocomplete
+            class="autocomplete"
+            :items="recipeNames"
+            v-model="currentRecipeName"
+        ></v-autocomplete>
+        <div v-if="currentRecipe">
+            <IngredientList :recipe="currentRecipe" :lists="lists" @setRecipes="setRecipes" @setItems="setItems" ></IngredientList>
+            <Instruction :recipe="currentRecipe" @setRecipes="setRecipes" ></Instruction>
+        </div>
     </div>
 </template>
 
@@ -20,6 +19,9 @@
         name: "RecipeOverview",
         components: {IngredientList, Instruction},
         props: ['recipes', 'lists'],
+        data: () => ({
+            currentRecipeName: '',
+        }),
         methods: {
             setRecipes: function(recipes) {
                 this.$emit('setRecipes', recipes);
@@ -27,10 +29,20 @@
             setItems: function(items) {
                 this.$emit('setItems', items);
             }
+        },
+        computed: {
+            recipeNames: function() {
+                return this.recipes.map(recipe => recipe.name);
+            },
+            currentRecipe: function() {
+                return this.recipes.find(recipe => recipe.name === this.currentRecipeName);
+            }
         }
 }
 </script>
 
 <style scoped>
-
+.autocomplete {
+    margin: 0 16px;
+}
 </style>

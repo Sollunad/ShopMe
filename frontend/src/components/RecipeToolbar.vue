@@ -3,7 +3,7 @@
         <v-btn v-if="!creating" @click="startCreating" text>Neue Zutat</v-btn>
         <v-text-field
             v-if="creating"
-            label="Solo"
+            label="Name"
             placeholder="Name"
             solo
             v-model="ingredientName"
@@ -39,6 +39,21 @@
 <script>
 import _recipes from '../services/endpoints/recipes';
 import _items from '../services/endpoints/items';
+import {parseItem} from "@/util/parseItem";
+
+
+
+function findSameIngredients(ingredients, newIngredientName) {
+    const ret = []
+    const names = ingredients.map(ingredient => ingredient.name)
+    const ids = ingredients.map(ingredient => ingredient.id)
+    for (let i = 0; i < names.length; i++) {
+        if (names[i] === newIngredientName) {
+            ret.push(ids[i]);
+        }
+    }
+    return ret;
+}
 
 export default {
     name: "RecipeToolbar",
@@ -69,7 +84,8 @@ export default {
         addIngredient: async function() {
             this.creating = false;
             if (this.ingredientName) {
-                const recipes = await _recipes.addIngredient(this.recipe.id, this.ingredientName);
+                const parsedItem = parseItem(this.ingredientName);
+                const recipes = await _recipes.addIngredient(this.recipe.id, parsedItem);
                 this.$emit('setRecipes', recipes);
                 this.ingredientName = '';
             }
@@ -91,7 +107,7 @@ export default {
             this.showPopup = true;
         },
         exportRecipe: async function() {
-            const unchecked = this.recipe.ingredients.filter(item => !item.checked).map(item => item.name);
+            const unchecked = this.recipe.ingredients.filter(item => !item.checked);
             const selectedListId = this.radioGroup;
             if (unchecked && selectedListId) {
                 const lists = await _items.addItems(selectedListId, unchecked);

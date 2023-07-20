@@ -1,5 +1,4 @@
 const _recipes = require('./recipes');
-const _items = require("../items/items");
 
 module.exports = [
     {function: getRecipes, path: '', method: 'get'},
@@ -11,16 +10,14 @@ module.exports = [
     {function: setChecked, path: '/checked', method: 'put'}
 ];
 
-function getRecipes(req) {
+function getRecipes() {
     return _recipes.getRecipes();
 }
 
 function addRecipe(req) {
-    const ingredients = req.body.ingredients;
     const name = req.body.name;
-    const instructions = req.body.instructions
-    if (ingredients && name && instructions) {
-        _recipes.addRecipe(ingredients, name, instructions);
+    if (name) {
+        _recipes.addRecipe(name);
     }
     return _recipes.getRecipes();
 }
@@ -35,9 +32,9 @@ function deleteRecipe(req) {
 
 function addIngredient(req) {
     const recipe = req.body.recipe;
-    const name = req.body.name;
-    if (recipe && name) {
-        _recipes.addIngredient(recipe, name);
+    const ingredient = req.body.ingredient;
+    if (recipe && ingredient) {
+        _recipes.addIngredient(recipe, ingredient);
     }
     return _recipes.getRecipes();
 }

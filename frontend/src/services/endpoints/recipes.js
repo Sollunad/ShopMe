@@ -6,16 +6,16 @@ async function getRecipes() {
     return await con('recipes', 'get', {});
 }
 
-async function addRecipe(ingredients, name, instructions) {
-    return await con('recipes', 'post', {ingredients, name, instructions});
+async function addRecipe(name) {
+    return await con('recipes', 'post', {name});
 }
 
 async function deleteRecipe(id) {
     return await con('recipes', 'delete', {id});
 }
 
-async function addIngredient(recipe, name) {
-    return await con('recipes/ingredients', 'post', {recipe, name});
+async function addIngredient(recipe, ingredient) {
+    return await con('recipes/ingredients', 'post', {recipe, ingredient});
 }
 
 async function deleteIngredient(id) {

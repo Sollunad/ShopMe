@@ -1,11 +1,13 @@
 <template>
     <div>
         <v-checkbox
-            v-model="checked"
+            v-model="ingredient.checked"
             @change="changeChecked"
         >
             <template v-slot:label>
                 <span>
+                    {{ingredient.amount}}
+                    {{ingredient.unit}}
                     {{ingredient.name}}
                 </span>
                 <v-btn text icon @click.stop="deleteIngredient">
@@ -22,20 +24,15 @@ import _recipes from '../services/endpoints/recipes';
 export default {
     name: "Ingredient",
     props: ['ingredient'],
-    data: () => ({
-        checked: false
-    }),
     methods: {
-        changeChecked: function() {
-            _recipes.setChecked(this.ingredient.id, this.checked);
+        changeChecked: async function() {
+            const recipes = await _recipes.setChecked(this.ingredient.id, this.ingredient.checked);
+            this.$emit('setRecipes', recipes);
         },
         deleteIngredient: async function() {
             const recipes = await _recipes.deleteIngredient(this.ingredient.id);
             this.$emit('setRecipes', recipes);
         }
     },
-    mounted: function() {
-        this.checked = this.ingredient.checked;
-    }
 }
 </script>

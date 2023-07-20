@@ -14,9 +14,9 @@ function getRecipes() {
     return store.get(store.types.recipes);
 }
 
-function addRecipe(ingredients, name, instructions) {
+function addRecipe(name) {
     const lists = store.get(store.types.recipes);
-    const list = listBuilder.newRecipe(name, ingredients, instructions);
+    const list = listBuilder.newRecipe(name);
     lists.push(list);
     store.set(store.types.recipes, lists);
 }
@@ -27,12 +27,11 @@ function deleteRecipe(id) {
     store.set(store.types.recipes, lists);
 }
 
-function addIngredient(recipeId, name) {
+function addIngredient(recipeId, ingredient) {
     const recipes = store.get(store.types.recipes);
     const recipe = recipes.find(l => l.id === recipeId);
-    console.log(recipe);
-    const ingredient = itemBuilder.newIngredient(name);
-    recipe.ingredients.push(ingredient);
+    const builtIngredient = itemBuilder.newItem(ingredient);
+    recipe.ingredients.push(builtIngredient);
     store.set(store.types.recipes, recipes);
 }
 
@@ -49,7 +48,6 @@ function deleteIngredient(id) {
 function changeInstructions(recipeId, instructions) {
     const recipes = store.get(store.types.recipes);
     const recipe = recipes.find(l => l.id === recipeId);
-    console.log(recipe);
     if (recipe) recipe.instructions = instructions;
     store.set(store.types.recipes, recipes);
 }

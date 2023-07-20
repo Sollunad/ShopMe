@@ -7,7 +7,7 @@
             label="Anleitung"
             v-model="localInstructions"
         ></v-textarea>
-        <v-btn class="ma-2" outlined color="indigo" v-if="localInstructions !== recipe.instructions" @click="submitInstructions">
+        <v-btn class="ma-2" outlined color="indigo" v-if="localInstructions !== recipe.instructions && localInstructions !== ''" @click="submitInstructions">
             Speichern
         </v-btn>
     </div>

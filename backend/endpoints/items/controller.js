@@ -4,30 +4,40 @@ module.exports = [
     {function: getItems, path: '', method: 'get'},
     {function: addItem, path: '', method: 'post'},
     {function: addItems, path: '/bulk', method: 'post'},
+    {function: emptyList, path: '/bulk', method: 'delete'},
     {function: deleteItem, path: '', method: 'delete'},
     {function: setChecked, path: '/checked', method: 'put'},
     {function: addList, path: '/lists', method: 'post'},
     {function: deleteList, path: '/lists', method: 'delete'}
 ];
 
-function getItems(req) {
+function getItems() {
     return _items.getItems();
 }
 
 function addItem(req) {
     const list = req.body.list;
-    const name = req.body.name;
-    if (list && name) {
-        _items.addItem(list, name);
+    const item = req.body.item;
+    if (list && item) {
+        _items.addItem(list, item);
     }
     return _items.getItems();
 }
 
 function addItems(req) {
     const list = req.body.list;
-    const names = req.body.names;
-    if (list && names) {
-        _items.addItems(list, names);
+    const items = req.body.items;
+    if (list && items) {
+        for (const item of items) {
+            _items.addItem(list, item);
+        }
+    }
+}
+
+function emptyList(req) {
+    const id = req.body.id;
+    if (id) {
+        _items.emptyList(id);
     }
     return _items.getItems();
 }

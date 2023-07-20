@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="delete all items button">
+    <list default="true" id="8150f1f0-f479-444d-97d9-dcb132fa28ee" name="Default Changelist" comment="recipes final.final">
+      <change afterPath="$PROJECT_DIR$/frontend/src/util/parseItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/endpoints/items/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/items/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/endpoints/recipes/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/recipes/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/endpoints/recipes/recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/endpoints/recipes/recipes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/itemBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/itemBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/listBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/listBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Ingredient.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Ingredient.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Instruction.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Instruction.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Toolbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ListToolbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeOverview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RecipeToolbar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Toolbar2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Toolbar2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/RecipePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/endpoints/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/endpoints/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/endpoints/recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/endpoints/recipes.js" afterDir="false" />
     </list>
     <list id="1587ab50-fa1a-444f-9b5d-ddf7f0288e19" name="DNC" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
-        <option value="JavaScript File" />
         <option value="Vue Composition API Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -110,7 +124,7 @@
       <workItem from="1689616231967" duration="8627000" />
       <workItem from="1689759834477" duration="3045000" />
       <workItem from="1689773767867" duration="9993000" />
-      <workItem from="1689851650604" duration="3190000" />
+      <workItem from="1689851650604" duration="14110000" />
     </task>
     <task id="LOCAL-00001" summary="backend work and frontend hello world">
       <created>1570876240747</created>
@@ -215,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689855666462</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="recipes final">
+      <option name="closed" value="true" />
+      <created>1689856682548</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1689856682548</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +269,8 @@
     <MESSAGE value="instructions" />
     <MESSAGE value="export to list" />
     <MESSAGE value="delete all items button" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete all items button" />
+    <MESSAGE value="recipes final" />
+    <MESSAGE value="recipes final.final" />
+    <option name="LAST_COMMIT_MESSAGE" value="recipes final.final" />
   </component>
 </project>

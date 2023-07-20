@@ -10,10 +10,10 @@ function newList(name) {
     }
 }
 
-function newRecipe(name, ingredients, instructions) {
+function newRecipe(name) {
     // ingredients: list, instructions: string
     const id = uuid();
     return {
-        id, name, ingredients, instructions
+        id, name, ingredients: [], instructions: ''
     }
 }

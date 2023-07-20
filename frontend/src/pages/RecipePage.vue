@@ -22,13 +22,25 @@ export default {
     }),
     methods: {
         loadRecipes: async function() {
-            this.recipes = await _recipes.getRecipes();
+            this.setRecipes(await _recipes.getRecipes());
         },
         loadLists: async function() {
-            this.lists = await _items.getItems();
+            this.setItems(await _items.getItems());
         },
         setRecipes: function(recipes) {
             this.recipes = recipes;
+            this.recipes = this.recipes.sort((a, b) => {
+                const nameA = a.name.toUpperCase();
+                const nameB = b.name.toUpperCase();
+
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            });
         },
         setItems: function(items) {
             this.items = items;
