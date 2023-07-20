@@ -1,13 +1,17 @@
 import con from '../connector';
 
-export default { getItems, addItem, deleteItem, setChecked, addList, deleteList };
+export default { getItems, addItem, addItems, deleteItem, setChecked, addList, deleteList, emptyList };
 
 async function getItems() {
     return await con('items', 'get', {});
 }
 
-async function addItem(list, name) {
-    return await con('items', 'post', {list, name});
+async function addItem(list, item) {
+    return await con('items', 'post', {list, item});
+}
+
+async function addItems(list, items) {
+    return await con('items/bulk', 'post', {list, items})
 }
 
 async function deleteItem(id) {
@@ -24,4 +28,8 @@ async function addList(name) {
 
 async function deleteList(id) {
     return await con('items/lists', 'delete', {id});
+}
+
+async function emptyList(id) {
+    return await con('items/bulk', 'delete', {id});
 }

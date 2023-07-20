@@ -7,6 +7,8 @@
             <template v-slot:label>
                 <span
                     v-bind:class="{checked}">
+                    {{item.amount}}
+                    {{item.unit}}
                     {{item.name}}
                 </span>
                 <v-btn text icon @click.stop="deleteItem">

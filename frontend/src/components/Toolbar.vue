@@ -1,6 +1,7 @@
 <template>
     <div>
-        <v-btn v-if="!creating" @click="startCreating">Neue Einkaufsliste</v-btn>
+        <v-btn @click="openRecipes" class="mr-3 mb-3">Rezepte</v-btn>
+        <v-btn v-if="!creating" @click="startCreating" class="mr-3 mb-3">Neue Einkaufsliste</v-btn>
         <v-text-field
                 v-if="creating"
                 label="Solo"
@@ -8,8 +9,8 @@
                 solo
                 v-model="listName"
         ></v-text-field>
-        <v-btn v-if="creating" @click="createList">{{buttonText}}</v-btn>
-        <v-btn text icon><v-icon @click="refresh">mdi-refresh</v-icon></v-btn>
+        <v-btn v-if="creating" @click="createList" class="mr-3 mb-3">{{buttonText}}</v-btn>
+        <v-btn text icon><v-icon @click="refresh" class="mr-3 mb-3">mdi-refresh</v-icon></v-btn>
     </div>
 </template>
 
@@ -38,6 +39,9 @@
                     this.$emit('setItems', items);
                     this.listName = '';
                 }
+            },
+            openRecipes: async function() {
+                await this.$router.push({path: 'recipes'});
             },
             refresh: function() {
                 this.$emit('refresh');

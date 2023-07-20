@@ -9,12 +9,14 @@
                 v-model="itemName"
         ></v-text-field>
         <v-btn v-if="creating" @click="addItem" text>{{createButtonText}}</v-btn>
+        <v-btn @click="deleteAllItems" :color="emptyButtonColor" text>{{emptyButtonText}}</v-btn>
         <v-btn @click="deleteList" :color="deleteButtonColor" text>{{deleteButtonText}}</v-btn>
     </div>
 </template>
 
 <script>
     import _items from '../services/endpoints/items';
+    import {parseItem} from "@/util/parseItem";
 
     export default {
         name: "ItemCreator",
@@ -22,6 +24,7 @@
         data: () => ({
             creating: false,
             deleting: false,
+            emptying: false,
             itemName: ''
         }),
         computed: {
@@ -31,8 +34,14 @@
             deleteButtonText: function() {
                 return this.deleting? 'Sicher?' : 'Liste löschen';
             },
+            emptyButtonText: function() {
+                return this.emptying? 'Sicher?' : 'Liste leeren';
+            },
             deleteButtonColor: function() {
                 return this.deleting? 'error' : '';
+            },
+            emptyButtonColor: function() {
+                return this.emptying? 'error' : '';
             }
         },
         methods: {
@@ -42,7 +51,8 @@
             addItem: async function() {
                 this.creating = false;
                 if (this.itemName) {
-                    const items = await _items.addItem(this.list.id, this.itemName);
+                    const parsedItem = parseItem(this.itemName);
+                    const items = await _items.addItem(this.list.id, parsedItem);
                     this.$emit('setItems', items);
                     this.itemName = '';
                 }
@@ -55,8 +65,21 @@
                 } else {
                     this.deleting = true;
                     const that = this;
-                    const timer = window.setTimeout(function() {
+                    window.setTimeout(function() {
                         that.deleting = false;
+                    }, 3000);
+                }
+            },
+            deleteAllItems: async function() {
+                if (this.emptying) {
+                    const items = await _items.emptyList(this.list.id);
+                    this.$emit('setItems', items);
+                    this.emptying = false;
+                } else {
+                    this.emptying = true;
+                    const that = this;
+                    window.setTimeout(function() {
+                        that.emptying = false;
                     }, 3000);
                 }
             }
