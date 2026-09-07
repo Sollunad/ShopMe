@@ -5,7 +5,6 @@ const listBuilder = require('../../services/listBuilder');
 exports.getItems = getItems;
 exports.addList = addList;
 exports.addItem = addItem;
-exports.addItems = addItems;
 exports.setChecked = setChecked;
 exports.deleteList = deleteList;
 exports.deleteItem = deleteItem;
