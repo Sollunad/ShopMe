@@ -1,4 +1,4 @@
 {
   "development": "http://localhost:3000/",
-  "production": "https://sv.sollunad.de:3000/"
+  "production": "https://home.sollunad.de/ShopMe/api/"
 }

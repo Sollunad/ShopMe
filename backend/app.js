@@ -4,7 +4,6 @@ const app = express();
 
 const fs = require('fs');
 const http = require('http');
-const https = require('https');
 
 let endpoints = [];
 
@@ -50,37 +49,6 @@ function requestHandler(request) {
     return endpoint.function(request);
 }
 
-try {
-    // Certificate
-    const privateKey = fs.readFileSync('/etc/letsencrypt/live/sv.sollunad.de/privkey.pem', 'utf8');
-    const certificate = fs.readFileSync('/etc/letsencrypt/live/sv.sollunad.de/cert.pem', 'utf8');
-    const ca = fs.readFileSync('/etc/letsencrypt/live/sv.sollunad.de/chain.pem', 'utf8');
-
-    const credentials = {
-        key: privateKey,
-        cert: certificate,
-        ca: ca
-    };
-
-    const env = process.argv[2];
-    if (env === 'http') {
-        serveHTTP();
-    } else {
-        serveHTTPS(credentials);
-    }
-} catch (e) {
-    console.log('Server konnte über HTTPS nicht gestartet werden');
-    serveHTTP();
-}
-
-function serveHTTPS(credentials) {
-    https.createServer(credentials, app).listen(3000, function () {
-        console.log('Server über HTTPS gestartet auf Port 3000!');
-    });
-}
-
-function serveHTTP() {
-    http.createServer(app).listen(3000, function () {
-        console.log('Server über HTTP gestartet auf Port 3000!');
-    });
-}
+http.createServer(app).listen(4001, function () {
+    console.log('Server gestartet auf Port 4001!');
+});
