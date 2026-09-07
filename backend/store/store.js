@@ -1,22 +1,30 @@
-const fs = require('fs');
+const { MongoClient } = require('mongodb');
 
 const storeTypes = {
     "items": "items",
     "recipes": "recipes"
 };
 
-exports.get = readJSON;
-exports.set = writeJSON;
+exports.getCollection = getCollection;
 exports.types = storeTypes;
 
-function readJSON(file) {
-    const rawdata = fs.readFileSync(`store/${file}.json`);
-    const json = JSON.parse(rawdata);
-    return json;
+const uri = process.env.SHOPME_MONGO_URI;
+if (!uri) {
+    throw new Error('SHOPME_MONGO_URI environment variable is required');
 }
 
-function writeJSON(file, json) {
-    const data = JSON.stringify(json);
-    fs.writeFileSync(`store/${file}.json`, data);
+const client = new MongoClient(uri);
+let dbPromise;
+
+function getDb() {
+    if (!dbPromise) {
+        dbPromise = client.connect().then(() => client.db());
+    }
+    return dbPromise;
+}
+
+async function getCollection(type) {
+    const db = await getDb();
+    return db.collection(type);
 }
 

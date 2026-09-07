@@ -11,72 +11,63 @@ exports.deleteList = deleteList;
 exports.deleteItem = deleteItem;
 exports.emptyList = emptyList;
 
-function getItems() {
-    return store.get(store.types.items);
+// Never return Mongo's _id to callers - it duplicates the existing "id"
+// field (reused as _id for storage) and callers/frontend only know "id".
+const NO_ID = { projection: { _id: 0 } };
+
+async function getItems() {
+    const collection = await store.getCollection(store.types.items);
+    return collection.find({}, NO_ID).toArray();
 }
 
-function addList(name) {
-    const lists = store.get(store.types.items);
+async function addList(name) {
+    const collection = await store.getCollection(store.types.items);
     const list = listBuilder.newList(name);
-    lists.push(list);
-    store.set(store.types.items, lists);
+    await collection.insertOne({ ...list, _id: list.id });
 }
 
-function addItem(listId, item) {
-    const lists = store.get(store.types.items);
-    const list = lists.find(l => l.id === listId);
-    const existingItem = list.items.find(i => i.unit === item.unit && i.name === item.name);
-    if (existingItem) {
-        if (existingItem.amount || item.amount) {
-            existingItem.amount = (existingItem.amount || 0) + (parseInt(item.amount || 0))
-        }
+async function addItem(listId, item) {
+    const collection = await store.getCollection(store.types.items);
+
+    const incomingAmount = parseInt(item.amount || 0) || 0;
+    if (incomingAmount) {
+        const result = await collection.updateOne(
+            { _id: listId, items: { $elemMatch: { unit: item.unit, name: item.name } } },
+            { $inc: { 'items.$[elem].amount': incomingAmount } },
+            { arrayFilters: [{ 'elem.unit': item.unit, 'elem.name': item.name }] }
+        );
+        if (result.matchedCount > 0) return;
     } else {
-        const builtItem = itemBuilder.newItem(item);
-        list.items.push(builtItem);
+        const existing = await collection.findOne(
+            { _id: listId, items: { $elemMatch: { unit: item.unit, name: item.name } } }
+        );
+        if (existing) return;
     }
-    store.set(store.types.items, lists);
+
+    const builtItem = itemBuilder.newItem(item);
+    await collection.updateOne({ _id: listId }, { $push: { items: builtItem } });
 }
 
-// not used anymore
-function addItems(listId, names) {
-    const lists = store.get(store.types.items);
-    const list = lists.find(l => l.id === listId);
-
-    for (const name of names) {
-        const item = itemBuilder.newItem(name);
-        list.items.push(item);
-    }
-    store.set(store.types.items, lists);
+async function setChecked(id, checked) {
+    const collection = await store.getCollection(store.types.items);
+    await collection.updateMany(
+        { items: { $elemMatch: { id } } },
+        { $set: { 'items.$[elem].checked': checked } },
+        { arrayFilters: [{ 'elem.id': id }] }
+    );
 }
 
-function setChecked(id, checked) {
-    const lists = store.get(store.types.items);
-    for (const list of lists) {
-        const item = list.items.find(i => i.id === id);
-        if (item) item.checked = checked;
-    }
-    store.set(store.types.items, lists);
+async function deleteList(id) {
+    const collection = await store.getCollection(store.types.items);
+    await collection.deleteOne({ _id: id });
 }
 
-function deleteList(id) {
-    let lists = store.get(store.types.items);
-    lists = lists.filter(l => l.id !== id);
-    store.set(store.types.items, lists);
+async function deleteItem(id) {
+    const collection = await store.getCollection(store.types.items);
+    await collection.updateMany({ 'items.id': id }, { $pull: { items: { id } } });
 }
 
-function deleteItem(id) {
-    let lists = store.get(store.types.items);
-    lists = lists.map(l => {
-        const list = l;
-        list.items = list.items.filter(i => i.id !== id);
-        return list;
-    });
-    store.set(store.types.items, lists);
-}
-
-function emptyList(id) {
-    let lists = store.get(store.types.items);
-    const list = lists.find(l => l.id === id);
-    list.items = [];
-    store.set(store.types.items, lists);
+async function emptyList(id) {
+    const collection = await store.getCollection(store.types.items);
+    await collection.updateOne({ _id: id }, { $set: { items: [] } });
 }

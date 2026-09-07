@@ -38,11 +38,11 @@ function registerEndpoint(path, endpoint) {
     endpoints[method][fullPath] = endpoint;
 }
 
-app.route('*').all(function (req, res) {
-    res.send(requestHandler(req));
+app.route('*').all(async function (req, res) {
+    res.send(await requestHandler(req));
 });
 
-function requestHandler(request) {
+async function requestHandler(request) {
     const method = request.method.toLowerCase();
     const endpoint = endpoints[method][request._parsedUrl.pathname];
     if (!endpoint) return [];
